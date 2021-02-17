@@ -1,0 +1,19 @@
+import static javax.swing.JOptionPane.*;
+ class Sekundertiltimer {
+
+	public static void main(String[] args) {
+        
+        String sekunderlest = showInputDialog("tast inn antall sekunder: ");
+        
+        
+        int sekunder = Integer.parseInt(sekunderlest);
+        int p1 = sekunder % 60;
+        int p2 = sekunder / 60;
+        int p3 = p2 % 60;
+        p2 = p2 / 60;
+
+        String utskrift = ( sekunderlest + " sekunder, tilsvarer: " + p2+  "  time(r), "  + p3 +  " minutte(r) og "  +p1+  " sekunder " );
+        showMessageDialog(null, utskrift);
+
+	}
+}
